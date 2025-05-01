@@ -3,16 +3,14 @@
 <p align="center">
  <a href="#tech">Technologies</a> • 
  <a href="#started">Getting Started</a> • 
-  <a href="#routes">API Endpoints</a> •
- <a href="#colab">Collaborators</a> •
- <a href="#contribute">Contribute</a>
+  <a href="#routes">API Endpoints</a> 
 </p>
 
 <p align="center">
     <b>Simple description of what your project do or how to use it.</b>
 </p>
 
-<h2 id="technologies">💻 Technologies</h2>
+<h2 id="tech">💻 Technologies</h2>
 
 - ExpressJS
 - NodeJS
@@ -71,9 +69,43 @@ Here you can list the main routes of your API, and what are their expected reque
 ​
 | route               | description                                          
 |----------------------|-----------------------------------------------------
-| <kbd>GET /api/users/dashboard?productsPage={value}&usersPage={value}&postsPage={value}&limit=10</kbd>     | retrieves data for secured dashboard
 | <kbd>POST /api/auth/register</kbd>     | register user
 | <kbd>POST /authenticate/login</kbd>     | user login
+| <kbd>GET /api/users/dashboard?productsPage={value}&usersPage={value}&postsPage={value}&limit=10</kbd>     | retrieves data for secured dashboard
+
+<h3 id="post-auth-detail">POST /api/auth/register</h3>
+
+**REQUEST**
+```json
+{
+    "email": "testUser2@gmail.com",
+    "password": "testpasswordfkfk"
+}
+```
+
+**RESPONSE**
+```json
+{
+    "message": "User registered successfully"
+}
+```
+
+<h3 id="post-auth-detail">POST /api/auth/login  </h3>
+
+**REQUEST**
+```json
+{
+    "email": "testUser1@gmail.com",
+    "password": "testpassword"
+}
+```
+
+**RESPONSE**
+```json
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTFkYmM5OGJiNzg3YmE4NmM3ZjExMyIsImlhdCI6MTc0NjA4MTkzOX0.DG6cWqfnrkaXsycq63fnIcMo2-1fUjHCQVgvxzBS65Y"
+}
+```
 
 <h3 id="get-auth-detail">GET /api/users/dashboard?productsPage={value}&usersPage={value}&postsPage={value}&limit=10</h3>
 
@@ -1567,40 +1599,6 @@ Here you can list the main routes of your API, and what are their expected reque
             "userId": 12
         }
     ]
-}
-```
-
-<h3 id="post-auth-detail">POST /api/auth/register</h3>
-
-**REQUEST**
-```json
-{
-    "email": "testUser2@gmail.com",
-    "password": "testpasswordfkfk"
-}
-```
-
-**RESPONSE**
-```json
-{
-    "message": "User registered successfully"
-}
-```
-
-<h3 id="post-auth-detail">POST /api/auth/login  </h3>
-
-**REQUEST**
-```json
-{
-    "email": "testUser1@gmail.com",
-    "password": "testpassword"
-}
-```
-
-**RESPONSE**
-```json
-{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTFkYmM5OGJiNzg3YmE4NmM3ZjExMyIsImlhdCI6MTc0NjA4MTkzOX0.DG6cWqfnrkaXsycq63fnIcMo2-1fUjHCQVgvxzBS65Y"
 }
 ```
 
